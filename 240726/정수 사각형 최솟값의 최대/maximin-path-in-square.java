@@ -41,15 +41,6 @@ public class Main {
         System.out.println(dp[N-1][N-1]);
     }
 
-    static void printMap(int[][] map) {
-       for (int i=0; i<N; i++) {
-            for (int j=0; j<N; j++) {
-                System.out.print(map[i][j] + " ");
-            }
-            System.out.println();
-        } 
-    }
-
     static boolean isIn(int x, int y) {
         return x>=0 && x<N && y>=0 && y<N;
     }
