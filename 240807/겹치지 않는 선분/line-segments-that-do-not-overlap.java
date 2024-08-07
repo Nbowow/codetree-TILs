@@ -50,7 +50,18 @@ public class Main {
                 totalCount--;
                 points[i].isAlive = false;
             }
-            else cur = points[i];
+            else {
+                // x0 > x1 && y0 < y1 => 겹치는 선분
+                if (points[i].x < cur.x) {
+                    if (cur.isAlive) {
+                    totalCount--;
+                    cur.isAlive = false;
+                }
+                    totalCount--;
+                    points[i].isAlive = false;
+                }
+                cur = points[i];
+            }
         }
 
         System.out.println(totalCount);
