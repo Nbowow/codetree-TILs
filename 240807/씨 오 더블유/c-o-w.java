@@ -28,7 +28,7 @@ public class Main {
             } else pSumR[i] = pSumR[i+1];
         }
 
-        int ans = 0;
+        long ans = 0;
         for (int i=1; i<N-1; i++) {
             if (str[i] == 'O') {
                 ans += pSumL[i] * pSumR[i];
