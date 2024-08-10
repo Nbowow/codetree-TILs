@@ -47,9 +47,6 @@ public class Main {
             RM[i] = Math.min(RM[i+1], points[i].e);
         }
 
-        // System.out.println(Arrays.toString(LM));
-        // System.out.println(Arrays.toString(RM));
-
         int totalCount = 0;
         if (RM[1] > points[0].e) totalCount++;
         if (LM[N-2] < points[N-1].e) totalCount++;
