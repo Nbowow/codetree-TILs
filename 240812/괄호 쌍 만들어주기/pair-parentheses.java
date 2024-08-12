@@ -15,7 +15,7 @@ public class Main {
             else close[i] = close[i+1];
         }
 
-        int ans = 0;
+        long ans = 0;
         for (int i=1; i<str.length; i++) {
             if (str[i] == '(' && str[i-1] == '(') {
                 ans += close[i];
