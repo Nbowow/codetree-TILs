@@ -9,18 +9,18 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
         
         st = new StringTokenizer(br.readLine());
-        long[] dist = new long[N-1];
+        int[] dist = new int[N-1];
         for (int i=0; i<N-1; i++) {
-            dist[i] = Long.parseLong(st.nextToken());
+            dist[i] = Integer.parseInt(st.nextToken());
         }
 
         st = new StringTokenizer(br.readLine());
-        long[] cost = new long[N];
+        int[] cost = new int[N];
         for (int i=0; i<N; i++) {
-            cost[i] = Long.parseLong(st.nextToken());
+            cost[i] = Integer.parseInt(st.nextToken());
         }
 
-        long[] min_cost = new long[N];
+        int[] min_cost = new int[N];
         min_cost[0] = cost[0];
         // 현재까지 에너지를 채우는데 드는 최소 비용을 저장
         for (int i=1; i<N; i++) {
@@ -29,7 +29,7 @@ public class Main {
 
         long ans = 0;
         for (int i=0; i<N-1; i++) {
-            ans += dist[i] * min_cost[i];
+            ans += (long) dist[i] * (long) min_cost[i];
         }
 
         System.out.println(ans);
