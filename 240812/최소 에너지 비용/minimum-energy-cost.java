@@ -29,7 +29,7 @@ public class Main {
 
         long ans = 0;
         for (int i=0; i<N-1; i++) {
-            ans += dist[i] * min_cost[i];
+            ans += (long) (dist[i] * min_cost[i]);
         }
 
         System.out.println(ans);
