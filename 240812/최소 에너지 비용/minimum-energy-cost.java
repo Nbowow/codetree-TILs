@@ -27,7 +27,7 @@ public class Main {
             min_cost[i] = Math.min(min_cost[i-1], cost[i]);
         }
 
-        int ans = 0;
+        long ans = 0;
         for (int i=0; i<N-1; i++) {
             ans += dist[i] * min_cost[i];
         }
