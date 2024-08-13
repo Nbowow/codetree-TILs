@@ -11,7 +11,13 @@ public class Main {
 
         int[] nums = new int[N];
         st = new StringTokenizer(br.readLine());
-        for (int i=0; i<N; i++) nums[i] = Integer.parseInt(st.nextToken());
+        for (int i=0; i<N; i++) {
+            nums[i] = Integer.parseInt(st.nextToken());
+            if (nums[i] >= S) {
+                System.out.println(1);
+                System.exit(0);
+            }
+        }
 
         int ans = Integer.MAX_VALUE;
         int tempSum = nums[0];
