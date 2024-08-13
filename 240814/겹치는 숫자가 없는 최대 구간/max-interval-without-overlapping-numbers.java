@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Main {
 
-    static int MAX_NUM = 100000;
+    static int MAX_NUM = 100005;
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
