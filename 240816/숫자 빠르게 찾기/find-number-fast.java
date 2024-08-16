@@ -13,7 +13,7 @@ public class Main {
 
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (num == nums[mid]) return mid;
+            if (num == nums[mid]) return (mid+1);
             else if (num < nums[mid]) {
                 right = mid - 1;
             }
