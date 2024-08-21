@@ -3,11 +3,13 @@ import java.io.*;
 
 public class Main {
 
+    static long MAX_S = 2000000000;
+
     static long binary(long target) {
 
         long left = 0;
-        long right = target-1;
-        long minIdx = target;
+        long right = MAX_S;
+        long minIdx = MAX_S;
 
         while (left <= right) {
             long mid = (left+right) / 2;
