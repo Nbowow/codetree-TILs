@@ -12,7 +12,7 @@ public class Main {
         while (left <= right) {
             long mid = (left+right) / 2;
 
-            if (mid * (mid+1) / 2 >= target) {
+            if (mid * (mid+1) / 2 > target) {
                 right = mid - 1;
                 minIdx = Math.min(minIdx, mid);
             }
