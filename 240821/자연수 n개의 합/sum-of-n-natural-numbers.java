@@ -8,6 +8,7 @@ public class Main {
     static long binary(long target) {
 
         long left = 0;
+        // right을 target으로 잡으면 long 범위 넘어갈 수 있음!
         long right = MAX_S;
         long minIdx = MAX_S;
 
