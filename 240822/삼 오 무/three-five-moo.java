@@ -18,7 +18,7 @@ public class Main {
         N = Long.parseLong(br.readLine());
 
         long left = 0;
-        long right = (long) 1000000000;
+        long right = Long.MAX_VALUE;
         long ans = 0;
         while (left <= right) {
 
