@@ -19,18 +19,13 @@ public class Main {
 
         long left = 0;
         long right = Long.MAX_VALUE;
-        long ans = 0;
+        long ans = Long.MAX_VALUE;
         while (left <= right) {
-
             long mid = (left + right) / 2;
 
-            if (parameticSearch(mid) == N) {
-                ans = mid;
-                break;
-            }
-
-            else if (parameticSearch(mid) > N) {
+            if (parameticSearch(mid) >= N) {
                 right = mid - 1;
+                ans = Math.min(ans, mid);
             }
 
             else left = mid + 1;
