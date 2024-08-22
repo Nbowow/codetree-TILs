@@ -15,9 +15,9 @@ public class Main {
         int ans = nums[0];
         int maxSum = 0;
         for (int i=0; i<N; i++) {
-
-            if (maxSum + nums[i] >= 0) maxSum += nums[i];
-            else maxSum = nums[i];
+            // 현재 maxSum이 음수이면 다음수부터 진행(직접 그려보면서 이해해야할듯)
+            if (maxSum < 0) maxSum = nums[i];
+            else maxSum += nums[i];
 
             ans = Math.max(ans, maxSum);
         }
