@@ -7,8 +7,11 @@ public class Main {
     static int[] nums;
 
     static boolean parametricSearch(int cur) {
+
+        // 예외처리
+        if (cur == 0) return false;
         
-        // cur숫자로 분배하여 m개 이상 얻을 수 있는지 확인
+        // cur숫자로 분배하여 m개 이상 얻을 수 있는지 확인 
         int totalCount = 0;
         for (int i=0; i<N; i++) {
             int q = nums[i] / cur;
