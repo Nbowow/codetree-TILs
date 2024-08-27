@@ -25,12 +25,12 @@ public class Main {
             }
         });
 
-        String ans = "";
+        StringBuilder sb = new StringBuilder();
         for (long num : nums) {
-            ans += num;
+            sb.append(num);
         }
 
-        System.out.println(ans);
+        System.out.println(sb);
 
     }
 }
