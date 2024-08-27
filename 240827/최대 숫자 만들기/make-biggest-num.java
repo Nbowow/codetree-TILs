@@ -17,11 +17,11 @@ public class Main {
                 String aS = Long.toString(a);
                 String bS = Long.toString(b);
                 
-                long ab = Long.parseLong(aS + bS);
-                long ba = Long.parseLong(bS + aS);
+                String ab = aS+bS;
+                String ba = bS+aS;
 
                 // 내림차순으로 정렬
-                return Long.compare(ba, ab);
+                return ba.compareTo(ab);
             }
         });
 
