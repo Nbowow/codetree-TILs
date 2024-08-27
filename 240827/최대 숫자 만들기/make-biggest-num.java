@@ -27,7 +27,7 @@ public class Main {
 
         String ans = "";
         for (long num : nums) {
-            ans += Long.toString(num);
+            ans += num;
         }
 
         System.out.println(ans);
