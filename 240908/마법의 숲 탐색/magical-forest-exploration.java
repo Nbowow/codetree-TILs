@@ -138,7 +138,7 @@ public class Main {
             else {
                 Golem cur = golems[g];
                 map[cur.r][cur.c] = g+1;
-                if (isIn(cur.r-1, cur.c)) map[cur.r-1][cur.c] = g+1;
+                map[cur.r-1][cur.c] = g+1;
                 map[cur.r][cur.c+1] = g+1;
                 map[cur.r+1][cur.c] = g+1;
                 map[cur.r][cur.c-1] = g+1;
