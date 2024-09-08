@@ -55,7 +55,6 @@ public class Main {
                 // 다른 골렘이라면
                 else {
                     // 출구일 경우만 다른 골렘으로 이동 가능
-                    // System.out.println("golem : " + (golems[val-1].r + dxdy[golems[val-1].d][0]) + " " + (golems[val-1].c + dxdy[golems[val-1].d][1]));
                     if (r == (golems[val-1].r + dxdy[golems[val-1].d][0])
                         && c == (golems[val-1].c + dxdy[golems[val-1].d][1])) {
                             isVisited[dx][dy] = true;
@@ -66,9 +65,7 @@ public class Main {
 
         }
 
-        // System.out.println(maxR-2);
         ans += maxR-2;
-
     }
 
     static boolean goRightDown(int idx) {
@@ -150,9 +147,6 @@ public class Main {
                 findBottom(g);
 
             }
-
-            // printMap(map);
-            // System.out.println();
         }
     }
 
@@ -180,9 +174,8 @@ public class Main {
         start();
 
         System.out.println(ans);
-
     }
-
+    // debug
     static void printMap(int[][] map) {
         for (int i=0; i<R+3; i++) {
             for (int j=0; j<C; j++) {
