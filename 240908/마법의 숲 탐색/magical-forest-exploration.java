@@ -25,7 +25,7 @@ public class Main {
         Golem cur = golems[idx];
 
         Queue<int[]> q = new ArrayDeque<>();
-        boolean[][] isVisited = new boolean[R][C];
+        boolean[][] isVisited = new boolean[R+3][C];
 
         q.offer(new int[]{cur.r, cur.c, idx+1});
         isVisited[cur.r][cur.c] = true;
@@ -66,7 +66,8 @@ public class Main {
 
         }
 
-        ans += maxR+1;
+        // System.out.println(maxR-2);
+        ans += maxR-2;
 
     }
 
@@ -134,7 +135,7 @@ public class Main {
             }
 
             // 하강 후 최종 위치가 맵 밖이라면 (r == -1) map 초기화
-            if (golems[g].r == -1) map = new int[R][C];
+            if (golems[g].r < 4) map = new int[R+3][C];
             
             // 하강 후 최종 위치가 맵 안이라면 맵에 위치 표시
             else {
@@ -164,7 +165,7 @@ public class Main {
         C = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
-        map = new int[R][C];
+        map = new int[R+3][C];
         golems = new Golem[K];
         // 골렘 정보 입력
         for (int i=0; i<K; i++) {
@@ -183,7 +184,7 @@ public class Main {
     }
 
     static void printMap(int[][] map) {
-        for (int i=0; i<R; i++) {
+        for (int i=0; i<R+3; i++) {
             for (int j=0; j<C; j++) {
                 System.out.print(map[i][j] + " ");
             }
@@ -192,7 +193,7 @@ public class Main {
     }
 
     static boolean isIn(int x, int y) {
-        return x>=0 && x<R && y>=0 && y<C;
+        return x>=0 && x<R+3 && y>=0 && y<C;
     }
 
     static void counterClockwise(int idx) {
